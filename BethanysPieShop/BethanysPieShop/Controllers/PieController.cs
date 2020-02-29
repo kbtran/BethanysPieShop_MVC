@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using BethanysPieShop.Models;
+using BethanysPieShop.ViewModels;
 
 namespace BethanysPieShop.Controllers
 {
@@ -20,9 +17,12 @@ namespace BethanysPieShop.Controllers
         // GET: /<controller>/
         public IActionResult List()
         {
-            ViewBag.CurrentCategory = "Cheese cakes";
-            var pies = _pieRepository.AllPies;
-            return View(pies);
+            //ViewBag.CurrentCategory = "Cheese cakes";
+            PiesListViewModel piesListViewModel = new PiesListViewModel();
+            piesListViewModel.Pies = _pieRepository.AllPies;
+            
+            piesListViewModel.CurrentCategory = "Cheese cakes";
+            return View(piesListViewModel);
         }
     }
 }
