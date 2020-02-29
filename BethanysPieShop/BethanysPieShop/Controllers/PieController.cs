@@ -17,14 +17,12 @@ namespace BethanysPieShop.Controllers
             _categoryRepository = categoryRepository;
         }
 
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
-
-        public ViewResult List()
+        // GET: /<controller>/
+        public IActionResult List()
         {
-            return View(_pieRepository.AllPies);
+            ViewBag.CurrentCategory = "Cheese cakes";
+            var pies = _pieRepository.AllPies;
+            return View(pies);
         }
     }
 }
