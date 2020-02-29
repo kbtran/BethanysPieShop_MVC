@@ -11,7 +11,7 @@
   <ItemGroup>
     <Folder Include="wwwroot\content\" />
     <Folder Include="wwwroot\images\" />
-    <Folder Include="wwwroot\libs\" />
+    <Folder Include="wwwroot\lib\" />
   </ItemGroup>
 
 </Project>
