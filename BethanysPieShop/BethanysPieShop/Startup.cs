@@ -62,9 +62,13 @@ namespace BethanysPieShop
                 //    await context.Response.WriteAsync("Hello World!");
                 //});
 
+                //endpoints.MapControllerRoute(
+                //    name: "default",
+                //    pattern: "{controller=Pie}/{action=List}");
+
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Pie}/{action=List}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
