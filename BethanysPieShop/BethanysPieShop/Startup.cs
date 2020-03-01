@@ -38,8 +38,8 @@ namespace BethanysPieShop
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IPieRepository, PieRepository>();
 
+            // Add these for the shopping cart
             services.AddScoped<ShoppingCart>(sp => ShoppingCart.GetCart(sp));
-
             services.AddHttpContextAccessor();
             services.AddSession();
         }
