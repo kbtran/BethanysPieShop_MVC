@@ -29,6 +29,7 @@
                         @*<li><a asp-controller="Pie" asp-action="List">Pies</a></li>*@
                         <li><a asp-controller="Contact" asp-action="Index">Contact</a></li>
                         @await Component.InvokeAsync("ShoppingCartSummary")
+                        <partial name="_LoginPartial" />
                     </ul>
                 </div>
             </div>
@@ -37,12 +38,13 @@
             <div class="col-md-3">
                 <p class="lead">
                     <a asp-controller="Home" asp-action="Index"><img class="img-responsive" alt="Bethany's Pie Shop'" src="~/Images/bethanylogo.png" /></a>
-</p>
+                </p>
             </div>
             <div class="col-md-9">
                 @RenderBody()
             </div>
         </div>
+        @RenderSection("Scripts", required: false)
     </div>
 </body>
 </html>
