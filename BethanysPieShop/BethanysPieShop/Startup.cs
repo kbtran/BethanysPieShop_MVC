@@ -37,6 +37,7 @@ namespace BethanysPieShop
             // Use SQL Server
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IPieRepository, PieRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
 
             // Add these for the shopping cart
             services.AddScoped<ShoppingCart>(sp => ShoppingCart.GetCart(sp));
