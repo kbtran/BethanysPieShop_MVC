@@ -1,6 +1,6 @@
 ﻿namespace BethanysPieShop.Models
 {
-    interface IOrderRepository
+    public interface IOrderRepository
     {
         void CreateOrder(Order order);
     }
