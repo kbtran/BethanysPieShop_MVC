@@ -60,7 +60,10 @@ namespace BethanysPieShop
             // Search wwwroot for static files
             app.UseStaticFiles();
             app.UseSession();
+            
             app.UseRouting();
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
